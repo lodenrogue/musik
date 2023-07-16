@@ -7,7 +7,7 @@ List and play music from the command line on your mac computer
 Add music files to a directory named audio in your home directory with the following structure
 
 ```
-artist_name/song_name.extension
+artist-name/song_name.extension
 ```
 
 For example:
