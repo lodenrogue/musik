@@ -1,6 +1,6 @@
 # Musik
 
-List and play music from the command line
+List and play music from the command line on your mac computer
 
 ## Set up
 
