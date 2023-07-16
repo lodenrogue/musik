@@ -9,8 +9,8 @@ function play() {
         echo "Error: Must provide at least partial song name to play"
         exit 1
     fi
-    
-    song_path=$(find "$AUDIO_DIRECTORY" -iname "*$1*")
+
+    song_path=$(find "$AUDIO_DIRECTORY" -type f -iname "*$1*" -print -quit)
 
     if [[ -z "$song_path" ]]; then
         echo "No song found matching name $1"
