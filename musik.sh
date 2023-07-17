@@ -21,16 +21,16 @@ function play() {
 }
 
 function list_songs() {
-    for artist in $(ls "$AUDIO_DIRECTORY"); do
+    for artist in $(ls "$AUDIO_DIRECTORY" | sort -n); do
         echo "$artist"
 
-        for item in $(ls "$AUDIO_DIRECTORY/$artist"); do
+        for item in $(ls "$AUDIO_DIRECTORY/$artist" | sort -n); do
             item_path="$AUDIO_DIRECTORY/$artist/$item"
 
             if [[ -d "$item_path" ]]; then
                 echo "    - $item"
 
-                for song in $(ls "$item_path"); do
+                for song in $(ls "$item_path" | sort -n); do
                     echo "        * $song"
                 done
             else
