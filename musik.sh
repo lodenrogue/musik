@@ -24,8 +24,18 @@ function list_songs() {
     for artist in $(ls "$AUDIO_DIRECTORY"); do
         echo "$artist"
 
-        for song in $(ls "$AUDIO_DIRECTORY/$artist"); do
-            echo "    - $song"
+        for item in $(ls "$AUDIO_DIRECTORY/$artist"); do
+            item_path="$AUDIO_DIRECTORY/$artist/$item"
+
+            if [[ -d "$item_path" ]]; then
+                echo "    - $item"
+
+                for song in $(ls "$item_path"); do
+                    echo "        * $song"
+                done
+            else
+                echo "    * $item"
+            fi
         done
         echo ""
     done

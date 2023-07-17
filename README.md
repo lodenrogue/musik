@@ -8,6 +8,10 @@ Add music files to a directory named audio in your home directory with the follo
 
 ```
 artist-name/song_name.extension
+
+or
+
+artist-name/album-name/song_name.extension
 ```
 
 For example:
@@ -16,6 +20,10 @@ For example:
 audio
 ├── avett-brothers
 │   └── ballad_of_love_and_hate.mp3
+├── ed-sheeran
+│   └── divide
+│       ├── caste_on_the_hill.mp3
+│       ├── dive.mp3
 └── ren-x-chinchilla
     ├── chalk_outlines.mp3
     └── how_to_be_me.mp3
@@ -33,11 +41,16 @@ Output:
 
 ```
 avett-brothers
-    - ballad_of_love_and_hate.mp3
+    * ballad_of_love_and_hate.mp3
+
+ed-sheeran
+    - divide
+        * caste_on_the_hill.mp3
+        * dive.mp3
 
 ren-x-chinchilla
-    - chalk_outlines.mp3
-    - how_to_be_me.mp3
+    * chalk_outlines.mp3
+    * how_to_be_me.mp3
 
 ```
 
