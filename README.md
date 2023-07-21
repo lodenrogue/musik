@@ -1,6 +1,6 @@
 # Musik
 
-List and play music from the command line
+Terminal music player
 
 ## Set up
 
