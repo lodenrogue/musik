@@ -1,8 +1,20 @@
 # Musik
 
-List and play music from the command line on your mac computer
+List and play music from the command line
 
 ## Set up
+
+### Install mpv
+
+mpv is required to play the music
+
+On Mac is can be installed with
+
+```
+brew install mpv
+```
+
+### Add music files
 
 Add music files to a directory named audio in your home directory with the following structure
 
@@ -60,6 +72,14 @@ You only need to give a partial name of the song you want to play
 
 ```
 sh musik.sh play ballad
+```
+
+### Play an album
+
+You only need to give a partial name of the album you want to play
+
+```
+sh musik.sh play -b divide
 ```
 
 ## Change the default audio directory
