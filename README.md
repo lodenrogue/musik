@@ -4,14 +4,16 @@ List and play music from the command line
 
 ## Set up
 
-### Install mpv
+### Prerequisites
 
-mpv is required to play the audio
+- mpv
+- youtube-dl
 
-On Mac is can be installed with
+On Mac they can be installed with:
 
 ```
 brew install mpv
+brew install youtube-dl
 ```
 
 ### Add music files
@@ -80,6 +82,12 @@ You only need to give a partial name of the album you want to play
 
 ```
 sh musik.sh play -b divide
+```
+
+### Download a song
+
+```
+sh musik.sh download videoid
 ```
 
 ## Change the default audio directory

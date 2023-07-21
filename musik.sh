@@ -42,6 +42,15 @@ function play() {
     fi
 }
 
+function download() {
+    if [[ -z "$1" ]]; then
+        echo "error: must provide video id"
+        exit 1
+    fi
+
+    youtube-dl -x --audio-format mp3 --add-metadata "$1"
+}
+
 function list_songs() {
     for artist in $(ls "$AUDIO_DIRECTORY" | sort -n); do
         echo "$artist"
@@ -65,6 +74,8 @@ function list_songs() {
 
 if [[ "$1" == "play" ]]; then
     play "$2" "$3"
+elif [[ "$1" == "download" ]]; then
+    download "$2"
 else
     list_songs
 fi
