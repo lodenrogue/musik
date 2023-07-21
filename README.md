@@ -6,7 +6,7 @@ List and play music from the command line
 
 ### Install mpv
 
-mpv is required to play the music
+mpv is required to play the audio
 
 On Mac is can be installed with
 
