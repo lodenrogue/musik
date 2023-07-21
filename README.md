@@ -84,10 +84,10 @@ You only need to give a partial name of the album you want to play
 sh musik.sh play -b divide
 ```
 
-### Download a song
+### Download a song or playlist
 
 ```
-sh musik.sh download videoid
+sh musik.sh download video-id/playlist-id
 ```
 
 ## Change the default audio directory
