@@ -16,7 +16,7 @@ function play_album() {
         echo "No album found matching name $1"
         exit 1
     else
-        mpv --playlist="$album_path"
+        mpv --playlist="$album_path" --display-tags=Artist,Album,Title
     fi
 
 }
@@ -38,7 +38,7 @@ function play() {
         echo "No song found matching name $1"
         exit 1
     else
-        mpv "$song_path"
+        mpv "$song_path" --display-tags=Artist,Album,Title
     fi
 }
 
