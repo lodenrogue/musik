@@ -87,7 +87,7 @@ sh musik.sh play -b divide
 ### Download a song or playlist
 
 ```
-sh musik.sh download video-id/playlist-id
+sh musik.sh download video-id/video-url/playlist-url
 ```
 
 ## Change the default audio directory

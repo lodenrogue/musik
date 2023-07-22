@@ -6,14 +6,14 @@ AUDIO_DIRECTORY="$HOME/audio"
 
 function play_album() {
     if [[ -z "$1" ]]; then
-        echo "Error: Must provide at least partial album name to play"
+        echo "error: must provide at least partial album name to play"
         exit 1
     fi
 
     album_path=$(find "$AUDIO_DIRECTORY" -type d -iname "*$1*" -print -quit)
 
     if [[ -z "$album_path" ]]; then
-        echo "No album found matching name $1"
+        echo "error: no album found matching name $1"
         exit 1
     else
         mpv --playlist="$album_path" --display-tags=Artist,Album,Title
@@ -23,7 +23,7 @@ function play_album() {
 
 function play() {
     if [[ -z "$1" ]]; then
-        echo "Error: Must provide at least partial song name to play"
+        echo "error: must provide at least partial song name to play"
         exit 1
     fi
 
@@ -35,7 +35,7 @@ function play() {
     song_path=$(find "$AUDIO_DIRECTORY" -type f -iname "*$1*" -print -quit)
 
     if [[ -z "$song_path" ]]; then
-        echo "No song found matching name $1"
+        echo "error: no song found matching name $1"
         exit 1
     else
         mpv "$song_path" --display-tags=Artist,Album,Title
@@ -44,7 +44,7 @@ function play() {
 
 function download() {
     if [[ -z "$1" ]]; then
-        echo "error: must provide video id"
+        echo "error: must provide video id/url or playlist url"
         exit 1
     fi
 
