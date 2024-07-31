@@ -7,13 +7,13 @@ Terminal music player
 ### Prerequisites
 
 - mpv
-- youtube-dl
+- yt-dlp
 
 On Mac they can be installed with:
 
 ```
 brew install mpv
-brew install youtube-dl
+brew install yt-dlp
 ```
 
 ### Add music files

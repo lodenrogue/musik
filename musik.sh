@@ -48,7 +48,7 @@ function download() {
         exit 1
     fi
 
-    youtube-dl -x --audio-format mp3 --add-metadata "$1"
+    yt-dlp -x --audio-format mp3 --add-metadata "$1"
 }
 
 function list_songs() {
